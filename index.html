@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>One Month of Love ❤️</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #ffebee;
+            color: #d32f2f;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .page {
+            display: none;
+            animation: fadeIn 1s;
+        }
+
+        .page.active {
+            display: block;
+        }
+
+        h1, h2 {
+            font-family: 'Dancing Script', cursive;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        button {
+            background: #d32f2f;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1.2em;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            background: #b71c1c;
+        }
+
+        .photo-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            margin: 20px 0;
+        }
+
+        .photo-grid img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .reasons-list {
+            text-align: left;
+            max-width: 600px;
+            margin: 0 auto;
+            max-height: 400px;
+            overflow-y: auto;
+            padding: 20px;
+        }
+
+        .letter-content {
+            text-align: left;
+            max-width: 600px;
+            margin: 0 auto;
+            font-style: italic;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .photo-with-caption {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.photo-caption {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    color: #d32f2f;
+    font-weight: 600;
+    margin: 0;
+    text-align: center;
+}
+    </style>
+</head>
+
+<audio id="bgMusic" loop>
+  <source src="your eyes.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+  // Try autoplay (may fail in Chrome)
+  document.addEventListener('DOMContentLoaded', function() {
+    const bgMusic = document.getElementById("bgMusic");
+    bgMusic.volume = 0.9;
+    
+    // Show button if autoplay fails
+    bgMusic.play().catch(() => {
+      const btn = document.createElement('button');
+      btn.innerHTML = '🎵';
+      btn.style.position = 'fixed';
+      btn.style.bottom = '20px';
+      btn.style.right = '20px';
+      btn.style.background = '#d32f2f';
+      btn.style.color = 'white';
+      btn.onclick = () => bgMusic.play();
+      document.body.appendChild(btn);
+    });
+  });
+</script>
+<body>
+    <div class="container">
+        <!-- Cover Page -->
+        <section id="cover" class="page active">
+            <h1>One Month with You</h1>
+            <h2>A Journey of Love ❤️</h2>
+            <p class="date"><p class="date">11<sup>th</sup> April, 2025</p></p>
+            <button onclick="nextPage()">Open My Heart</button>
+        </section>
+
+        <!-- Our Story -->
+        <section id="our-story" class="page">
+            <h2>Our Story</h2>
+            <div class="content">
+                <p>We met on <strong>Via seeing picture of each of use via common friend</strong>...</p>
+                <p>Our first conversation was about <strong>About our Dinner menu</strong>...</p>
+                <p>I knew you were special when <strong>You say "Tu Karlega" and the way you talked.</strong> ❤️</p>
+            </div>
+            <button onclick="nextPage()">Next</button>
+        </section>
+
+        <section id="gallery" class="page">
+          <h2>Memories in Moments</h2>
+          <div class="photo-grid">
+              <div class="photo-with-caption">
+                  <img src="pic6.jpg" alt="Us in Cheap & Best">
+                  <p class="photo-caption">Cheap & Best Date</p>
+              </div>
+              <div class="photo-with-caption">
+                  <img src="pic8.jpg" alt="Us in One Bite">
+                  <p class="photo-caption">One Bite Date</p>
+              </div>
+              
+          </div>
+          <button onclick="nextPage()">Next</button>
+      </section>
+        <!-- Reasons I Love You -->
+        <section id="reasons" class="page">
+            <h2>69 Reasons I Love You</h2>
+            <div class="reasons-list">
+                <ol>
+                  <li>Your smile lights up my world.</li>
+                  <li>You understand me like no one else.</li>
+                  <li>Your smile makes my heart skip a beat.</li>
+                  <li>The way you look at me like I’m the only person in the room.</li>
+                  <li>Your laugh is my favorite sound in the world.</li>
+                  <li>You understand me better than anyone ever has.</li>
+                  <li>Your kindness touches everyone around you.</li>
+                  <li>You make even ordinary moments feel magical.</li>
+                  <li>Your hugs are my safe place.</li>
+                  <li>You love me at my best and my worst.</li>
+                  <li>You remember the little things that matter to me.</li>
+                  <li>Your voice calms me when I’m stressed.</li>
+                  <li>You inspire me to be a better person.</li>
+                  <li>You’re my biggest supporter.</li>
+                  <li>Your intelligence amazes me every day.</li>
+                  <li>You make me believe in love more than anyone ever has.</li>
+                  <li>You’re my favorite person to talk to—about anything.</li>
+                  <li>Your passion for life is contagious.</li>
+                  <li>You challenge me in the best ways.</li>
+                  <li>You’re the reason I believe in soulmates.</li>
+                  <li>You love me in a way no one else ever could.</li>
+                  <li>You’re my home.</li>
+                  <li>Your random silly laughs when you’re happy.</li>
+                  <li>How you snort when you laugh too hard.</li>
+                  <li>The cute faces you make when you’re concentrating.</li>
+                  <li>You’re my favorite cuddle buddy.</li>
+                  <li>You put up with my terrible jokes.</li>
+                  <li>The way you light up when talking about things you love.</li>
+                  <li>Your obsession with her way of eating</li>
+                  <li>You’re the only one who truly gets my weirdness.</li>
+                  <li>How you always find a way to cheer me up.</li>
+                  <li>Your morning voice is the cutest thing ever.</li>
+                  <li>You’re secretly a dork, and I love it.</li>
+                  <li>You pretend to hate my puns, but I know you love them.</li>
+                  <li>The way you pout when you don’t get your way.</li>
+                  <li>You’re my partner-in-crime for late-night ideas.</li>
+                  <li>Your competitive side comes out during Geography Debate.</li>
+                  <li>You mumbling in the phone, and it’s adorable.</li>
+                  <li>You’re the only one who can make me smile no matter what.</li>
+                  <li>You’re my favorite notification.</li>
+                  <li>You make even the most boring errands fun.</li>
+                  <li>You see the best in me, even when I don’t.</li>
+                  <li>You’ve stood by me during my toughest times.</li>
+                  <li>You make my future feel brighter.</li>
+                  <li>You accept my flaws without judgment.</li>
+                  <li>You challenge me to grow.</li>
+                  <li>You’re the reason I believe in love at its purest form.</li>
+                  <li>You make me feel understood in a way no one else does.</li>
+                  <li>You’ve changed my life for the better.</li>
+                  <li>You’re my greatest adventure.</li>
+                  <li>You love me in a way that heals old wounds.</li>
+                  <li>You’re the reason I look forward to tomorrow.</li>
+                  <li>You make me feel safe to be completely myself.</li>
+                  <li>You’ve taught me what unconditional love really means.</li>
+                  <li>You’re my peace in a chaotic world.</li>
+                  <li>You’ve made me a more patient and kinder person.</li>
+                  <li>You’re my favorite "good morning" and "goodnight."</li>
+                  <li>You’re the love I didn’t know I was missing.</li>
+                  <li>You make me believe in forever.</li>
+                  <li>You’re my best friend and my greatest love.</li>
+                  <li>You and Me both " WE WE WE "</li>
+                  <li>The way you bite your lip when you’re thinking.</li>
+                  <li>Your scent drives me crazy in the best way.</li>
+                  <li>The way you look at me when you want me to kiss you.</li>
+                  <li>You’re the only one who can make me blush.</li>
+                  <li>Your confidence is irresistible.</li>
+                  <li>The way you whisper in my ear.</li>
+                  <li>You’re my favorite distraction.</li>
+                  <li>You make my heart race with just a touch.</li>
+                  <div class="special-message" style="font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 1.8rem; color: #d32f2f; text-align: center; margin: 40px 0; padding: 25px; background: rgba(255, 255, 255, 0.8); border-radius: 12px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); letter-spacing: 0.5px; line-height: 1.4; text-transform: none; border-left: 4px solid #d32f2f;">
+                    I love you because... <span style="font-weight: 700; color: #b71c1c;">you're you</span> — and no one else could ever compare.
+                </div>
+
+                </ol>
+            </div>
+            <button onclick="nextPage()">Next</button>
+        </section>
+
+        <!-- Love Letter -->
+        <section id="letter" class="page">
+            <h2>A Letter to You</h2>
+            <div class="letter-content">
+                <p>My Love Diyuuu<span style="color: #ff6b6b;">💞</span>,</p>
+                <p>These past 30 days with you have been...</p>
+                <p>Forever yours,</p>
+                <p>Anitesh<span style="color: #ff6b6b;">❤</span></p>
+            </div>
+            <button onclick="nextPage()">Next</button>
+        </section>
+
+        <!-- Future Adventures -->
+        <section id="future" class="page">
+            <h2>Our Future Adventures</h2>
+            <ul>
+                <li>Travel to New Zealand! and enjoying the sea, landscapes and mountains together!</li>
+                <li>Try Bungy and Skydiving Jumping together</li>
+                <li>Try to be together for forever</li>
+                <li>To become your fav person and sticking with you like Chingum</li>
+                <li>To become a supportive partner for you</li>
+            </ul>
+            <button onclick="nextPage()">Next</button>
+        </section>
+
+        <!-- Closing Page -->
+        <section id="closing" class="page">
+            <h2>Happy One Month, My Love!</h2>
+            <p>One month down, forever to go. ❤️</p>
+            <p>I can't wait for our next chapter.</p>
+            <button onclick="restart()">Relive Our Journey</button>
+        </section>
+    </div>
+    
+    <script>
+        
+        let currentPage = 0;
+        const pages = document.querySelectorAll('.page');
+        
+        
+        function init() {
+            pages.forEach((page, index) => {
+                page.classList.remove('active');
+                if (index === 0) page.classList.add('active');
+            });
+        }
+        
+        // Go to next page
+        function nextPage() {
+            pages[currentPage].classList.remove('active');
+            currentPage = (currentPage + 1) % pages.length;
+            pages[currentPage].classList.add('active');
+            
+           
+            window.scrollTo(0, 0);
+        }
+        
+       
+        function restart() {
+            pages[currentPage].classList.remove('active');
+            currentPage = 0;
+            pages[currentPage].classList.add('active');
+            window.scrollTo(0, 0);
+        }
+        
+       
+        window.onload = init;
+    </script>
+</body>
+</html>
